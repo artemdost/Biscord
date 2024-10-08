@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Voice Call with Chat</title>
+</head>
+<body>
+    <h1>Голосовой звонок с чатом</h1>
+
+    <!-- Кнопки для голосового звонка -->
+    <button id="joinCall">Присоединиться к звонку</button>
+    <button id="leaveCall" disabled>Отключиться от звонка</button>
+
+    <!-- Аудио для удаленного звука -->
+    <audio id="remoteAudio" controls autoplay></audio>
+
+    <!-- Чат -->
+    <div id="chat">
+        <div id="chatWindow" style="border:1px solid #ccc; height:200px; overflow-y:scroll;"></div>
+        <input type="text" id="chatInput" placeholder="Введите сообщение...">
+        <button id="sendMessage">Отправить</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
